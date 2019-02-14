@@ -1,6 +1,5 @@
 #pragma once
 #include<memory>
-#include<stdexcept>
 
 template<typename T>
 class Forward_list
@@ -36,7 +35,7 @@ Forward_list<T>::~Forward_list() {
 }
 
 template<typename T>
-inline void Forward_list<T>::push_front(T data)
+void Forward_list<T>::push_front(T data)
 {
 	if (!head) {
 		head = std::make_shared<Node<T>>(data);
@@ -50,7 +49,7 @@ inline void Forward_list<T>::push_front(T data)
 }
 
 template<typename T>
-inline void Forward_list<T>::pop_front()
+void Forward_list<T>::pop_front()
 {
 	head =head->pNext;
 	size--;
