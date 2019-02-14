@@ -11,7 +11,7 @@ public:
 	void pop_front();
 	T& front() const;
 	bool empty() const;
-	size_t getSize() { return size; }
+	size_t getSize() const{ return size; }
 private:
 	template<typename T>
 	class Node {
